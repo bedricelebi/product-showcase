@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Product Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px) rotateY(5deg);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .scrolling-carousel {
+            animation: scroll 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%) }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-white">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-20">
+        <div class="absolute inset-0 bg-black opacity-5"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <!-- Hero Content -->
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <span class="text-sm font-semibold tracking-wider text-indigo-600 uppercase">New Collection</span>
+                    <h1 class="text-5xl md:text-6xl font-bold mt-4 mb-6 text-gray-900">Redefining Modern Design</h1>
+                    <p class="text-lg text-gray-600 mb-8">Explore our premium selection of innovative products that blend functionality with aesthetics. Quality craftsmanship meets contemporary design.</p>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-all hover:shadow-lg flex items-center justify-center">
+                            Shop Collection
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <button class="px-8 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-all">
+                            Explore Features
+                        </button>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600">250+</div>
+                            <div class="text-gray-600">Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600">98%</div>
+                            <div class="text-gray-600">Satisfaction</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-indigo-600">24/7</div>
+                            <div class="text-gray-600">Support</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Showcase -->
+                <div class="lg:w-1/2 relative">
+                    <div class="floating relative">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-indigo-100 rounded-full filter blur-2xl opacity-70"></div>
+                        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-pink-100 rounded-full filter blur-2xl opacity-70"></div>
+                        
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/59a86796-dae4-4413-af70-9dabd80d8e77.png" alt="Sleek modern product with minimalist white design on a light gray background, showcasing premium materials and ergonomic design" 
+                            class="w-full max-w-lg mx-auto rounded-2xl shadow-xl border-8 border-white">
+                        
+                        <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-xl shadow-lg flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Products</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our handpicked selection of premium products designed to enhance your lifestyle.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3663aaab-117c-4b69-92d8-d5e85f031a5f.png" alt="Premium wireless headphones with black matte finish and silver accents resting on wooden surface"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full">New</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-xl text-gray-900">Aurora Headphones</h3>
+                                <p class="text-gray-500">Premium Wireless</p>
+                            </div>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">$199</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <button class="text-indigo-600 font-medium hover:text-indigo-800">View Details</button>
+                            <button class="p-2 bg-gray-100 rounded-lg hover:bg-indigo-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7f4028d3-9787-48ac-90c3-c9cd96f4be1a.png" alt="Modern smartwatch with dark face and brown leather band displayed on marble surface"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-xl text-gray-900">Chronos Watch</h3>
+                                <p class="text-gray-500">Smart Wearable</p>
+                            </div>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">$249</span>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <button class="text-indigo-600 font-medium hover:text-indigo-800">View Details</button>
+                            <button class="p-2 bg-gray-100 rounded-lg hover:bg-indigo-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6aea46ad-40b5-40a6-b7b1-8eefc0f541cd.png" alt="Ultra-slim laptop with metallic finish open on a desk with coffee cup and notepad"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                        <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">Sale</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-bold text-xl text-gray-900">Horizon Laptop</h3>
+                                <p class="text-gray-500">Ultra Performance</p>
+                            </div>
+                            <div>
+                                <span class="line-through text-gray-400 mr-2">$1299</span>
+                                <span class="bg-indigo-100 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">$999</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center">
+                            <button class="text-indigo-600 font-medium hover:text-indigo-800">View Details</button>
+                            <button class="p-2 bg-gray-100 rounded-lg hover:bg-indigo-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Infinite Scrolling Brands -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-6 overflow-hidden">
+            <div class="text-center mb-12">
+                <p class="text-sm font-semibold tracking-wider text-indigo-600 uppercase mb-2">Trusted By</p>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900">Global Brands & Innovators</h2>
+            </div>
+            
+            <div class="relative">
+                <div class="scrolling-carousel whitespace-nowrap inline-block">
+                    <div class="inline-flex items-center space-x-12 mr-12">
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">TechGiant</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">InnoCore</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">Quantum</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">Vertex</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">Nexus</span>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm h-20 w-40 flex items-center justify-center">
+                            <span class="text-xl font-bold text-gray-800">Elevate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple interactive elements
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const img = card.querySelector('img');
+                img.style.transform = 'scale(1.05)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const img = card.querySelector('img');
+                img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+
